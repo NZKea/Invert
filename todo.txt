@@ -1,0 +1,3 @@
+Jump button to #navbar
+Screens smaller than 800 just text
+Change 3 images to stack.

@@ -423,3 +423,17 @@ h4 {
 #contactheading {
     font-size: 2em;
 }
+#contactbox {
+    max-width: 30vw;
+    margin-top: 10vh;
+}
+
+wrapper {
+    background-color: #fff;
+    width: 100vh;
+    width: 100vw;
+}
+
+@media only screen and (max-width:800px) { 
+	/* CSS rules here */
+}
