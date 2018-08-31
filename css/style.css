@@ -45,6 +45,7 @@ body {
 
 [data-area="Logo"] {
     grid-area: 1 / 2 / 1 / 2;
+    width: 100vw;
 }
 
 
@@ -365,7 +366,6 @@ h4 {
     display: flex;
     align-items: center;
     background-image: url("../option2.jpg");
-    background-repeat:  
     color:black;
     float: left;
     position: relative;
@@ -468,4 +468,5 @@ h4 {
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
+    z-index: 100000;
 }
