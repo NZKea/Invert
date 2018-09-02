@@ -37,7 +37,6 @@ function scroll() {
     MBtn.style.display = "none";
   } else {
     MBtn.style.display = "block";
-    console.log("Hi")
   }  
 };
 
