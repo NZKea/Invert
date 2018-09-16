@@ -482,3 +482,48 @@ table{
     margin-left: 10% !important;
 }
 
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cactive, .collapsible:hover {
+    background-color: #ccc;
+  }
+
+
+/* Style the collapsible content. Note: hidden by default */
+.ccontent {
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 80%;
+    z-index: 1;
+    position: absolute;
+  }
+
+.jscolor {
+    position: absolute;
+    z-index: 3;
+    width:15%;
+    height: 100%%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+
+}
+svg {
+    z-index: 2;
+    position: absolute;
+
+}
