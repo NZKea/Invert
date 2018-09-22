@@ -12,17 +12,18 @@
 
 
 	<h2>Example 1</h2>
-	Color: <input class="jscolor" value="ab2567">
+	Color: <input class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" value="ab2567">
+	 <input id="chosen-value" value="000000" >
 
 
 
 	<h2>Example 2</h2>
 
-	<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+	<button class="jscolor {valueElement:'chosen-value2', onFineChange:'setTextColor(this)'}">
 		Pick text color
 	</button>
 
-	HEX value: <input id="chosen-value" value="000000">
+	HEX value: <input id="chosen-value2" value="000000">
 
 	<script>
 	function setTextColor(picker) {

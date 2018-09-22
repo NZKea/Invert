@@ -60,13 +60,17 @@ function scroll() {
 function bottom() {
   window.scrollTo(0,document.body.scrollHeight);
 }
+function jscolor1(picker) {
+  // 'jscolor' instance can be used as a string
+  document.getElementById('spray').setAttribute('fill', "#"+ picker.toString())
+}
+function jscolor2(picker) {
+  // 'jscolor' instance can be used as a string
+  document.getElementById('spray2').setAttribute('fill', "#"+ picker.toString())
+}
 
 window.addEventListener('load', function(){
   var loader = document.getElementById("wrapper");
   loader.style.display = "none";
 
 });
-function update(jscolor) {
-  // 'jscolor' instance can be used as a string
-  document.getElementById('spray').setAttribute('fill', "#"+jscolor)
-}
