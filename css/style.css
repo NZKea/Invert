@@ -54,12 +54,6 @@ body {
 .icon-bar {
 
     overflow: auto;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto; 
-    bottom: 1px;
-    left: 0;
-    right: 0;
 
 
 }
@@ -162,9 +156,9 @@ h4 {
   }
 
   .Clipboard {
-    -ms-grid-row: 1;
+    grid-row: 1;
     -ms-grid-row-span: 0;
-    -ms-grid-column: 1;
+    grid-column: 1;
     -ms-grid-column-span: 0;
   }
 
@@ -235,8 +229,10 @@ h4 {
   }
 
   .ham {
-      display:none;
-  }
+    right: 10000000px;
+    position: absolute;
+}
+
 @media screen and (max-width: 600px) {
     .ham {
         display: block !important;
@@ -494,6 +490,7 @@ table{
     font-size: 15px;
     margin-left: auto;
     margin-right: auto;
+    margin-left: 2vw;
   }
 
   .cactive, .collapsible:hover {
@@ -508,15 +505,23 @@ table{
     background-color: #f1f1f1;
     width: 80%;
     z-index: 1;
+    height: 15vh;
+    margin-left: 2vw;
+  }
+  
+#coloroptions {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 80%;
+    z-index: 1;
     position: absolute;
     height: 15vh;
-  }
-
+}
 .jscolor {
     position: absolute;
     z-index: 3;
     width:15%;
-    height: 100%;
+    height: 50%;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -528,6 +533,7 @@ svg {
     z-index: 2;
     position: absolute;
     margin: 1vh;
+    top:0;
 
 }
 .spray2 {
@@ -541,6 +547,51 @@ svg {
     left: 0px;
     margin: 1vh
 }
-.Preview {
-    margin-left: 
+
+
+#options {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh;
+
+}
+#text   {
+    color: white;
+    font-size: 2em !important;
+}
+
+@keyframes pulse {
+    0% {
+    color: #001F3F;
+    }
+    25% {
+        color: pink;
+        }
+    50% {
+    color: green;
+    }
+    75% {
+    color: red;
+    }
+    100% {
+      color: blue ;
+    }
+  }
+
+#backboard {
+    animation: pulse 5s infinite;
+    margin-left: 10%;
+}
+#letters {
+    animation: pulse 5s infinite;
+    right: 10%;
+    position: absolute;
+    top: 0;
+}
+#summary {
+    display: block;
+    font-size: 1em !important;
+}
+#ordersummary {
+    margin-top: 5vh;
 }
