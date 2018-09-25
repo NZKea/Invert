@@ -45,6 +45,7 @@ function scroll() {
   var navbar = document.getElementById("navbar");
   var pos = navbar.getBoundingClientRect();
   var MBtn = document.getElementById("MBtn");
+  console.log(pos);
   if (
     pos.top >= 0 &&
     pos.left >= 0 &&
