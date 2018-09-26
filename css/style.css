@@ -102,7 +102,7 @@ textarea, input {
     background: transparent;
     font-size: 1.2em;
 }
-button {
+#contactbutton {
     background-color: black;
 }
 h2 {
@@ -616,4 +616,22 @@ html, body {
     #custom {
         left:55vw; 
     }
+    #options {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .collapsible {
+        width: 100%;
+        margin: 0px !important;
+    }
+    .ccontent {
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+#ordernow {
+    background-color: none;
+    width: 25vw;
 }
