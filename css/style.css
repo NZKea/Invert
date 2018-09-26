@@ -40,7 +40,7 @@ body {
 
 [data-area="Base"] {
     grid-area: 3 / 1 / 3 / 4;
-    max-width: 100vw;
+    max-width: 89vw;
 }
 
 [data-area="Logo"] {
@@ -204,16 +204,19 @@ h4 {
   
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .icon-bar a:not(:first-child) {display: none;}
-    .icon-bar a.icon {
+    fa {
       float: right;
       display: block;
      
     }
+    #link {
+        display: none;
+    }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .icon-bar.responsive .icon {
         
       right: 0;
@@ -229,14 +232,9 @@ h4 {
   }
 
   .ham {
-
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .ham {
-        display: block !important;
-    }
+    position: absolute;
+    right: 0px;
+    display: block !important;
 }
 #pleaserotate-graphic{
     fill: #fff;
@@ -595,8 +593,27 @@ svg {
     margin-top: 5vh;
 }
 #navbar {
-    transform: translateX(10%);
+    margin-left: 10%;
 }
 #summary {
     height: auto !important;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width:43.75em) { 
+    .shopsplit {
+        display: block;
+    }
+    .Clipboard {
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #custom {
+        left:55vw; 
+    }
 }
