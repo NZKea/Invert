@@ -20,6 +20,7 @@
 	$('#customtext').on('input',function(e){
 		var custom = $('#customtext').val();
 		document.getElementById("text").innerHTML = 'You have entered "' + custom + '"'
+		document.getElementById("word").value = custom
 		var len = custom.length
 		if (len > 5) {
 			var lenc = len- 5
@@ -46,13 +47,10 @@
 	$(".1,.2,.3,.4,.5").on("click", function(e){
 		e.preventDefault();
 		document.getElementById("text").innerHTML = 'You have chosen "' + dict[this.className] + '"'
+		document.getElementById("word").value = dict[this.className]
 		price= 25
 		document.getElementById("price").innerHTML = "$" + price
 });
-<<<<<<< HEAD
-	//# If length > 5 count letters, get count - 5, ties count by 5> if color not B or W, price + 10 </p>
-=======
->>>>>>> 05081e66c303b81751f36dd80c7e01244012de3c
 
 
 });
@@ -177,17 +175,20 @@
 						<p>Two</p>
 			
 						</div>
-
 					<button id="ordersummary" class="collapsible">Order Summary</button>
 					<div id="summary" class="ccontent">
-							<p id="price">$0</p>
+							<p>Total Cost:</p><p id="price">$0</p>
 							<form name="submit-to-google-sheet">
 							<input name="name" type="name" placeholder="Name" required>
 							<input name="email" type="email" placeholder="Email" required>
 							<input name="Street Address" type="address" placeholder="Street Address" required>
 							<input name="City and Postcode" type="city" placeholder="City and Postcode" required>
 							<input name="Special Instructions" type="text" placeholder="Special Instructions">
-							<button id="ordernow" type="submit">Send</button>
+							<input id="color1" name="color1" type="text" placeholder="">
+							<input id="color2" name="color2" type="text" placeholder="">
+							<input id="word" name="word" type="text" placeholder="">
+							<button id="ordernow" type="submit">Submit Order</button>
+							<p>You will be contacted with bank details in order to make a deposit. </p>
 							</form>
 
 							<script>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="utf-8"/>
 <html>
 		<div id="wrapper"style="background-color:black;height: 100vh;width: 100vw; z-index: 100; position: fixed;top: 0px;left: 0px;overflow: hidden;">
 				<img src="loader.gif">
@@ -7,8 +8,14 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/cocoen.min.css">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="js/script.js"></script>
+	
+<script>
 
+
+
+</script>
 	</head>
 
 	<body>
@@ -19,7 +26,7 @@
 
 <div class="curtain">
   <div class="curtain__wrapper">
-    <input type="checkbox" checked>
+		<input class="check" type="checkbox" checked>
     
     <div class="curtain__panel curtain__panel--left">
 			<div id="blurb">     
@@ -29,11 +36,13 @@
 			</div> <!-- curtain__panel -->
     
     <div class="curtain__content">
-  		<img id="production" src="Picture1.png">
+  		<img class="process" id="production" src="Picture1.png">
     </div>
     
     <div class="curtain__panel curtain__panel--right">
+			
 				<table>
+					<tr><td><p id="about"> Click Anywhere to see the Production Process.</p></tr>
 					<tr>
 							<td><img id="about" src="About 1.jpg" alt=""></td>
 					</tr>
@@ -54,8 +63,8 @@
 	<div data-area="Logo">
 		<img src="logo.png" id="logo" alt="">
 	</div>
-	<div data-area="Base">
-		<div id="navbar" class="icon-bar">
+	<div id="navbar" class="icon-bar"  data-area="Base">
+		<div id="target" class="icon-bar">
 		  <a href="index.html"><i class="fa fa-home"></i></a>
 		 
 		  <a  href="contact.html"><i class="fa fa-envelope"></i></a>

@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var h = window.matchMedia("(max-width: 700px)")
   hamburger(h) // Call listener function at run time
   h.addListener(hamburger) // Attach listener function on state changes 
-  if (page==="index.html") {
-    new Cocoen();
-  };
+   
   if (page==="shop.html") {
 
 
@@ -41,16 +39,17 @@ function hamburger(h) {
       var element = document.getElementById("target");
       element.appendChild(hamelement);
       console.log("Appeared")
+      visible = true
     } 
     else {
       console.log("else")
      }
       
 
-  } else {
-    visible = false
+  } else { 
     try {
     $('.ham').remove();
+    visible = false
     }
     catch(err) {
      console.log("Nope")
@@ -97,10 +96,12 @@ function bottom() {
 function jscolor1(picker) {
   // 'jscolor' instance can be used as a string
   document.getElementById('spray').setAttribute('fill', "#"+ picker.toString())
+  document.getElementById("color1").value = picker.toString();
 }
 function jscolor2(picker) {
   // 'jscolor' instance can be used as a string
   document.getElementById('spray2').setAttribute('fill', "#"+ picker.toString())
+  document.getElementById("color2").value = picker.toString();
 }
 
 window.addEventListener('load', function(){
@@ -108,4 +109,10 @@ window.addEventListener('load', function(){
   loader.style.display = "none";
   var load = true
 
+  var process = document.getElementById("production");
+	console.log(process)
+$('.check').change(function() {
+  $(".process").toggle();
+});
+new Cocoen();
 });
