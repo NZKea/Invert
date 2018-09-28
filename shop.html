@@ -14,6 +14,7 @@
 <script src="js/jscolor.js"></script>
 
 <script>
+	var price = 0
 	$(document).ready(function(e) {
 	$('img[usemap]').rwdImageMaps();
 
@@ -50,8 +51,39 @@
 		document.getElementById("word").value = dict[this.className]
 		price= 25
 		document.getElementById("price").innerHTML = "$" + price
+	
 });
-
+	var delivery = "none"
+	$( ".awd" ).click(function() {
+		if (delivery === "none") {
+			price= price + 10
+			delivery = "awd"
+			document.getElementById("price").innerHTML = "$" + price
+		}
+		else if (delivery === "nwd") {
+			price= price - 3.50
+			delivery = "awd"
+			document.getElementById("price").innerHTML = "$" + price
+		}
+		else {
+			console.log("Again?")
+		}
+		});
+		$( ".nwd" ).click(function() {
+		if (delivery === "none") {
+			price= price + 13.50
+			delivery = "nwd"
+			document.getElementById("price").innerHTML = "$" + price
+		}
+		else if (delivery === "awd") {
+			price= price + 3.50
+			delivery = "nwd"
+			document.getElementById("price").innerHTML = "$" + price
+		}
+		else {
+			console.log("Again?")
+		}
+		});
 
 });
 
@@ -172,7 +204,10 @@
 					</div>
 					<button class="collapsible" >Delivery</button>
 					<div class="ccontent">
-						<p>Two</p>
+						<div class="btn-group">
+							<button class="awd">Auckland Wide $10</button>
+							<button class="nwd">New Zealand Wide $13.70 </button>
+						  </div>
 			
 						</div>
 					<button id="ordersummary" class="collapsible">Order Summary</button>
