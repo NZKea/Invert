@@ -93,15 +93,32 @@ function scroll() {
 function bottom() {
   window.scrollTo(0,document.body.scrollHeight);
 }
+function colorprice() {
+  if (ncolor===true) {
+  console.log("Already Adjusted")
+}
+else {
+  eprice = eprice + 10
+  console.log(price)
+  document.getElementById("price").innerHTML = "$" + (+price + +eprice)
+}
+}
 function jscolor1(picker) {
   // 'jscolor' instance can be used as a string
   document.getElementById('spray').setAttribute('fill', "#"+ picker.toString())
   document.getElementById("color1").value = picker.toString();
+  colorprice();
+  ncolor= true
+  
 }
+var ncolor= false
 function jscolor2(picker) {
   // 'jscolor' instance can be used as a string
   document.getElementById('spray2').setAttribute('fill', "#"+ picker.toString())
   document.getElementById("color2").value = picker.toString();
+  colorprice();
+  ncolor= true
+  
 }
 
 window.addEventListener('load', function(){

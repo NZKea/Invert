@@ -9,88 +9,90 @@
 		<link rel="stylesheet" href="css/cocoen.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			var price = 0
+			var eprice = 0
+			$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		
+			$('#customtext').on('input',function(e){
+				var custom = $('#customtext').val();
+				document.getElementById("text").innerHTML = 'You have entered "' + custom + '"'
+				document.getElementById("word").value = custom
+				var len = custom.length
+				if (len > 5) {
+					var lenc = len- 5
+					price = 25 + lenc * 5
+					document.getElementById("price").innerHTML = "$" + (+price + +eprice);
+				}
+				else {
+					var price = 25
+					document.getElementById("price").innerHTML = "$" + (+price + +eprice);
+				}
+		});
+			
+			function update(jscolor) {
+			// 'jscolor' instance can be used as a string
+			document.getElementById('spray').setAttribute('fill', "#"+jscolor)
+			}
+			var dict = {
+				  1: "Welcome",
+				  2: "Patience",
+				  3: "Kiwi",
+				  4: "Joy",
+				  5: "Auckland",
+		};
+			$(".1,.2,.3,.4,.5").on("click", function(e){
+				e.preventDefault();
+				document.getElementById("text").innerHTML = 'You have chosen "' + dict[this.className] + '"'
+				document.getElementById("word").value = dict[this.className]
+				price= 25
+				document.getElementById("price").innerHTML = "$" + (+price + +eprice)
+			
+		});
+			var delivery = "none"
+			$( ".awd" ).click(function() {
+				if (delivery === "none") {
+					eprice= eprice + 10
+					delivery = "awd"
+					document.getElementById("price").innerHTML = "$" + (+price + +eprice)
+				}
+				else if (delivery === "nwd") {
+					eprice= eprice - 3.70
+					delivery = "awd"
+					document.getElementById("price").innerHTML = "$" + (+price + +eprice)
+				}
+				else {
+					console.log("Again?")
+				}
+				});
+				$( ".nwd" ).click(function() {
+				if (delivery === "none") {
+					eprice= eprice + 13.70
+					delivery = "nwd"
+					document.getElementById("price").innerHTML = "$" + (+price + +eprice)
+				}
+				else if (delivery === "awd") {
+					eprice= eprice + 3.70
+					delivery = "wd"
+					document.getElementById("price").innerHTML = "$" + (+price + +eprice)
+				}
+				else {
+					console.log("Again?")
+				}
+				});
+			
+		
+		});
+		
+		</script>
 <script src="js/jquery.rwdImageMaps.js"></script>
 <script src="js/script.js"></script>
 <script src="js/jscolor.js"></script>
 
-<script>
-	var price = 0
-	$(document).ready(function(e) {
-	$('img[usemap]').rwdImageMaps();
-
-	$('#customtext').on('input',function(e){
-		var custom = $('#customtext').val();
-		document.getElementById("text").innerHTML = 'You have entered "' + custom + '"'
-		document.getElementById("word").value = custom
-		var len = custom.length
-		if (len > 5) {
-			var lenc = len- 5
-			price = 25 + lenc * 5
-			document.getElementById("price").innerHTML = "$" + price;
-		}
-		else {
-			var price = 25
-			document.getElementById("price").innerHTML = "$" + price;
-		}
-});
-	
-	function update(jscolor) {
-    // 'jscolor' instance can be used as a string
-    document.getElementById('spray').setAttribute('fill', "#"+jscolor)
-	}
-	var dict = {
-		  1: "Welcome",
-		  2: "Patience",
-		  3: "Kiwi",
-		  4: "Joy",
-		  5: "Auckland",
-};
-	$(".1,.2,.3,.4,.5").on("click", function(e){
-		e.preventDefault();
-		document.getElementById("text").innerHTML = 'You have chosen "' + dict[this.className] + '"'
-		document.getElementById("word").value = dict[this.className]
-		price= 25
-		document.getElementById("price").innerHTML = "$" + price
-	
-});
-	var delivery = "none"
-	$( ".awd" ).click(function() {
-		if (delivery === "none") {
-			price= price + 10
-			delivery = "awd"
-			document.getElementById("price").innerHTML = "$" + price
-		}
-		else if (delivery === "nwd") {
-			price= price - 3.50
-			delivery = "awd"
-			document.getElementById("price").innerHTML = "$" + price
-		}
-		else {
-			console.log("Again?")
-		}
-		});
-		$( ".nwd" ).click(function() {
-		if (delivery === "none") {
-			price= price + 13.50
-			delivery = "nwd"
-			document.getElementById("price").innerHTML = "$" + price
-		}
-		else if (delivery === "awd") {
-			price= price + 3.50
-			delivery = "nwd"
-			document.getElementById("price").innerHTML = "$" + price
-		}
-		else {
-			console.log("Again?")
-		}
-		});
-
-});
-
-</script>
 	</head>
 	<body>
-		<button onclick="bottom()" id="MBtn" title="Go to top">Menu</button> 
+		<button onclick="bottom()" id="MBtn" >Menu</button> 
 	  <div class="grid-container">
 		<div data-area="Main">
 			<div class="shopsplit">
